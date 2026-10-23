@@ -11,7 +11,7 @@ function Square({ value, onSquareClick, isWinning }) {
   );
 }
 
-function Board({ xIsNext, squares, onPlay }) {
+function Board({ xIsNext, squares, onPlay, onReset }) {
   function handleClick(i) {
     if (calculateWinner(squares) || squares[i]) {
       return;
@@ -36,6 +36,7 @@ function Board({ xIsNext, squares, onPlay }) {
 
   return (
     <>
+      <button onClick={onReset}>Reset Game</button>
       <div className="status">{status}</div>
       <div className="board-row">
         <Square
@@ -108,6 +109,11 @@ export default function Game() {
     setCurrentMove(nextMove);
   }
 
+  function handleReset() {
+    setHistory([Array(9).fill(null)]);
+    setCurrentMove(0);
+  }
+
   const moves = history.map((squares, move) => {
     let description;
     if (move > 0) {
@@ -125,7 +131,7 @@ export default function Game() {
   return (
     <div className="game">
       <div className="game-board">
-        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} onReset={handleReset} />
       </div>
       <div className="game-info">
         <ol>{moves}</ol>
