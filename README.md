@@ -1,6 +1,6 @@
 # Tic Tac Toe
 
-A React-based tic tac toe game with move history and game replay functionality.
+A React-based tic tac toe game with move history and game replay functionality. Following official [React tutorial](https://react.dev/learn/tutorial-tic-tac-toe#what-are-you-building).
 
 ## Technologies
 
@@ -11,12 +11,14 @@ A React-based tic tac toe game with move history and game replay functionality.
 ## Installation
 
 Clone the repository:
+
 ```bash
 git clone https://github.com/pjosifovic/tic-tac-toe.git
 cd tic-tac-toe
 ```
 
 Install dependencies:
+
 ```bash
 npm install
 ```
@@ -24,6 +26,7 @@ npm install
 ## Running the Application
 
 Start the development server:
+
 ```bash
 npm start
 ```
@@ -33,15 +36,13 @@ The application will open at `http://localhost:3000`.
 ## Available Scripts
 
 - `npm start` - Run the development server
-- `npm run build` - Build for production
-- `npm test` - Run tests
 
 ## Features
 
 - Interactive tic tac toe gameplay for two players
 - Move history with ability to jump to previous game states
 - Real-time game status display
-- Responsive design
+- Highlight winner
 
 ## Project Structure
 
